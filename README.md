@@ -1,99 +1,202 @@
-# 🛡️ Cylock — Dashboard de Notícias em Cibersegurança
+# Cylock Threat Dashboard — Liga Acadêmica de Cibersegurança
 
-Plataforma pública de monitoramento e visualização de notícias sobre cibersegurança, voltada para estudantes e o público geral da **Universidade Federal de Sergipe**.
+Plataforma web para agregação, organização e visualização de notícias sobre cibersegurança, com foco em acessibilidade da informação, acompanhamento de tendências e visualização didática de dados.
 
----
+## Objetivo do Projeto
 
-## 🎯 Objetivo
+Criar um dashboard público capaz de:
 
-Centralizar e exibir notícias atualizadas de cibersegurança de forma **organizada, visual e acessível**, facilitando o acompanhamento de tendências e o aprendizado de quem está começando na área.
-
----
-
-## ⚙️ Funcionalidades Principais
-
-### 📰 Coleta e Exibição de Notícias
-- Agregação de notícias via **RSS, APIs e scraping**
-- Atualização automática em intervalos configuráveis
-- Exibição com: título, resumo, fonte, data e categoria
-- Destaque visual para notícias de **alto impacto**
-
-### 🔍 Filtros e Busca
-- Filtro por **categoria** (malware, phishing, vulnerabilidades...)
-- Filtro por **data** e **fonte**
-- Campo de **busca por palavras-chave**
-
-### 📊 Dashboard e Visualizações
-- Gráficos de tendências (ex: tipos de ataques mais frequentes)
-- Indicadores visuais de **nível de risco**
-- Estatísticas simples e didáticas
-
-### 🔔 Alertas e Notificações
-- Integração com bot no **Telegram** e **Discord**
-- Envio automático de alertas para notícias relevantes
+* Centralizar notícias atualizadas sobre cibersegurança
+* Facilitar o aprendizado e acompanhamento de tendências
+* Exibir informações de forma organizada e didática
+* Tornar o conteúdo mais acessível para estudantes e público geral
 
 ---
 
-## 🏗️ Arquitetura
+## Funcionalidades Planejadas
 
-```
-Coletor de Dados → Backend → Banco de Dados → Frontend (Dashboard)
-                                                      ↓
-                                          Módulo de Notificações
-                                         (Telegram / Discord)
-```
+### Coleta de Dados
 
-| Camada | Responsabilidade |
-|---|---|
-| **Coletor** | Extrai e normaliza notícias de fontes externas |
-| **Backend** | Processa, categoriza e prioriza o conteúdo |
-| **Banco de Dados** | Armazena notícias, fontes e categorias |
-| **Frontend** | Interface web de visualização |
-| **Notificações** | Dispara alertas via Telegram/Discord |
+O sistema deverá:
 
----
+* Agregar notícias de múltiplas fontes
+* Consumir RSS, APIs e scraping
+* Atualizar automaticamente em intervalos configuráveis
+* Classificar notícias por categoria
 
-## 🧰 Stack Tecnológica (Planejada)
+Categorias previstas:
 
-**Backend**
-- Python · FastAPI · feedparser · SQLAlchemy
-
-**Frontend**
-- React · TailwindCSS · Chart.js ou Recharts
-
-**Infraestrutura**
-- PostgreSQL · Docker · GitHub Actions · Render / Railway
+* Malware
+* Phishing
+* Vulnerabilidades
+* Vazamentos
+* Threat Intelligence
 
 ---
 
-## ⚠️ Riscos Conhecidos
+### Exibição de Conteúdo
 
-- Mudanças na estrutura de sites externos podem **quebrar o scraping**
-- Dependência de fontes externas (instabilidade ou bloqueios)
-- Volume de dados pode crescer rapidamente → necessidade de paginação e limpeza periódica
+Cada notícia deverá apresentar:
 
----
+* Título
+* Resumo
+* Fonte
+* Data
 
-## ✅ Critérios de Aceitação
+O sistema também permitirá:
 
-- [ ] Notícias exibidas corretamente e atualizadas
-- [ ] Filtros e busca funcionando sem falhas
-- [ ] Dashboard com dados claros e compreensíveis
-- [ ] Interface utilizável por iniciantes
-
----
-
-## 📋 Requisitos Não Funcionais
-
-| Requisito | Meta |
-|---|---|
-| ⚡ Desempenho | Carregamento < 3 segundos |
-| 📱 Responsividade | Desktop e mobile |
-| 🔒 Segurança | Proteção contra XSS e CSRF |
-| 🔁 Disponibilidade | 99% do tempo |
-| 📦 Escalabilidade | Arquitetura modular |
+* Visualização detalhada da notícia
+* Destaque para notícias relevantes ou de alto impacto
 
 ---
 
-> 📧 **cylock.ufs@gmail.com** · 📸 **@cylock.ufs**
-> *Liga Acadêmica de Cibersegurança — Universidade Federal de Sergipe*
+### Filtros e Busca
+
+Os usuários poderão:
+
+* Filtrar notícias por categoria
+* Filtrar por fonte
+* Filtrar por data
+* Buscar por palavras-chave
+
+---
+
+### Dashboard e Visualizações
+
+O dashboard contará com:
+
+* Gráficos de tendências
+* Estatísticas simples e didáticas
+* Indicadores visuais de risco
+* Visualização de tipos de ataques mais frequentes
+
+---
+
+### Sistema de Notificações
+
+Integração futura com:
+
+* Telegram
+* Discord
+
+Para envio automatizado de alertas e notícias relevantes.
+
+---
+
+## Arquitetura Proposta
+
+O sistema será dividido em:
+
+### Coletor de Dados
+
+Responsável pela extração e normalização das notícias.
+
+### Backend
+
+Responsável pelo processamento, categorização e armazenamento das informações.
+
+### Banco de Dados
+
+Responsável pelo armazenamento otimizado das notícias, fontes e categorias.
+
+### Frontend
+
+Dashboard web para visualização das informações e estatísticas.
+
+### Módulo de Notificações
+
+Integração com bots e envio de alertas automatizados.
+
+---
+
+## Stack Tecnológica Planejada
+
+### Backend
+
+* Python
+* FastAPI
+* PostgreSQL
+
+### Frontend
+
+* React
+* TailwindCSS
+* Recharts / Chart.js
+
+### Infraestrutura
+
+* Docker
+* GitHub Actions
+* Render / Railway / Fly.io
+
+---
+
+## Requisitos do Sistema
+
+### Desempenho
+
+* Tempo de carregamento inferior a 3 segundos
+* Atualização eficiente e fluida
+
+### Usabilidade
+
+* Interface simples e intuitiva
+* Linguagem acessível para não especialistas
+* Compatibilidade com desktop e dispositivos móveis
+
+### Segurança
+
+* Proteção contra ataques comuns
+* Integridade dos dados exibidos
+
+### Escalabilidade
+
+* Arquitetura modular
+* Suporte ao crescimento de acessos simultâneos
+
+---
+
+## Escopo do MVP
+
+Nesta fase inicial, o foco será:
+
+* Coleta de notícias via RSS
+* API básica de notícias
+* Dashboard inicial
+* Busca e filtros
+* Visualização básica de estatísticas
+
+O objetivo do MVP é validar o uso da plataforma e disponibilizar uma primeira versão funcional do dashboard.
+
+---
+
+## Riscos e Considerações
+
+* Mudanças na estrutura dos sites podem quebrar scraping
+* Dependência de fontes externas
+* Necessidade de validação das fontes
+* Crescimento rápido do volume de dados
+
+---
+
+## Critérios de Aceitação
+
+* Notícias devem ser exibidas corretamente e atualizadas
+* Filtros e busca devem funcionar sem falhas
+* Dashboard deve apresentar dados claros e compreensíveis
+* Interface deve ser utilizável por iniciantes
+
+---
+
+## Público-Alvo
+
+* Estudantes
+* Integrantes da liga
+* Entusiastas de tecnologia
+* Público geral interessado em cibersegurança
+
+---
+
+## Objetivo Educacional
+
+O projeto busca democratizar o acesso à informação em cibersegurança, tornando o conteúdo mais acessível, visual e educativo.
