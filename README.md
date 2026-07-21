@@ -14,74 +14,12 @@ Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de
 - **Descrição:** 70.000 imagens em escala de cinza (28x28 pixels) divididas em 10 classes de roupas e acessórios, com 6.000 amostras por classe no treino e 1.000 no teste.
 
 ## Tipo da tarefa
-Classificação multiclasse — o atributo-alvo (`label`) representa uma das 10 categorias:
-
-
-|
- Rótulo 
-|
- Classe 
-|
-|
---------
-|
---------
-|
-|
- 0 
-|
- T-shirt/top 
-|
-|
- 1 
-|
- Trouser 
-|
-|
- 2 
-|
- Pullover 
-|
-|
- 3 
-|
- Dress 
-|
-|
- 4 
-|
- Coat 
-|
-|
- 5 
-|
- Sandal 
-|
-|
- 6 
-|
- Shirt 
-|
-|
- 7 
-|
- Sneaker 
-|
-|
- 8 
-|
- Bag 
-|
-|
- 9 
-|
- Ankle boot 
-|
+Classificação multiclasse, o atributo-alvo (`label`) representa uma das 10 categorias: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag e Ankle Boot.
 
 ## Organização dos arquivos
-repositório
-┣  fundamentosIA.ipynb # Notebook principal com todo o projeto
-┗  README.md # Este arquivo
+repositório:
+fundamentosIA.ipynb # Notebook principal com todo o projeto
+README.md # Este arquivo
 
 Os dados são carregados diretamente do Kaggle via `kagglehub` dentro do notebook, sem necessidade de download manual.
 
@@ -104,4 +42,4 @@ Os dados são carregados diretamente do Kaggle via `kagglehub` dentro do noteboo
 | SGDClassifier | 85.41% | 0.8537 |
 | **RandomForestClassifier** | **97.88%** | **0.9787** |
 
-O **RandomForestClassifier** foi escolhido como modelo final por apresentar o melhor desempenho em todas as métricas avaliadas. As principais dificuldades ocorreram entre classes visualmente similares: Shirt, Coat e Pullover (roupas de cima com silhueta parecida) e Sandal, Sneaker e Ankle Boot (calçados com estrutura semelhante).
+O RandomForestClassifier foi escolhido como modelo final por apresentar o melhor desempenho em todas as métricas avaliadas. As principais dificuldades ocorreram entre classes visualmente similares: Shirt, Coat e Pullover (roupas de cima com silhueta parecida) e Sandal, Sneaker e Ankle Boot (calçados com estrutura semelhante).
