@@ -1,202 +1,107 @@
-# Cylock Threat Dashboard — Liga Acadêmica de Cibersegurança
-
-Plataforma web para agregação, organização e visualização de notícias sobre cibersegurança, com foco em acessibilidade da informação, acompanhamento de tendências e visualização didática de dados.
-
-## Objetivo do Projeto
-
-Criar um dashboard público capaz de:
-
-* Centralizar notícias atualizadas sobre cibersegurança
-* Facilitar o aprendizado e acompanhamento de tendências
-* Exibir informações de forma organizada e didática
-* Tornar o conteúdo mais acessível para estudantes e público geral
-
----
-
-## Funcionalidades Planejadas
-
-### Coleta de Dados
-
-O sistema deverá:
-
-* Agregar notícias de múltiplas fontes
-* Consumir RSS, APIs e scraping
-* Atualizar automaticamente em intervalos configuráveis
-* Classificar notícias por categoria
-
-Categorias previstas:
-
-* Malware
-* Phishing
-* Vulnerabilidades
-* Vazamentos
-* Threat Intelligence
-
----
-
-### Exibição de Conteúdo
-
-Cada notícia deverá apresentar:
-
-* Título
-* Resumo
-* Fonte
-* Data
-
-O sistema também permitirá:
-
-* Visualização detalhada da notícia
-* Destaque para notícias relevantes ou de alto impacto
-
----
-
-### Filtros e Busca
-
-Os usuários poderão:
-
-* Filtrar notícias por categoria
-* Filtrar por fonte
-* Filtrar por data
-* Buscar por palavras-chave
-
----
-
-### Dashboard e Visualizações
-
-O dashboard contará com:
-
-* Gráficos de tendências
-* Estatísticas simples e didáticas
-* Indicadores visuais de risco
-* Visualização de tipos de ataques mais frequentes
-
----
-
-### Sistema de Notificações
-
-Integração futura com:
-
-* Telegram
-* Discord
-
-Para envio automatizado de alertas e notícias relevantes.
-
----
-
-## Arquitetura Proposta
-
-O sistema será dividido em:
-
-### Coletor de Dados
-
-Responsável pela extração e normalização das notícias.
-
-### Backend
-
-Responsável pelo processamento, categorização e armazenamento das informações.
-
-### Banco de Dados
-
-Responsável pelo armazenamento otimizado das notícias, fontes e categorias.
-
-### Frontend
-
-Dashboard web para visualização das informações e estatísticas.
-
-### Módulo de Notificações
-
-Integração com bots e envio de alertas automatizados.
-
----
-
-## Stack Tecnológica Planejada
-
-### Backend
-
-* Python
-* FastAPI
-* PostgreSQL
-
-### Frontend
-
-* React
-* TailwindCSS
-* Recharts / Chart.js
-
-### Infraestrutura
-
-* Docker
-* GitHub Actions
-* Render / Railway / Fly.io
-
----
-
-## Requisitos do Sistema
-
-### Desempenho
-
-* Tempo de carregamento inferior a 3 segundos
-* Atualização eficiente e fluida
-
-### Usabilidade
-
-* Interface simples e intuitiva
-* Linguagem acessível para não especialistas
-* Compatibilidade com desktop e dispositivos móveis
-
-### Segurança
-
-* Proteção contra ataques comuns
-* Integridade dos dados exibidos
-
-### Escalabilidade
-
-* Arquitetura modular
-* Suporte ao crescimento de acessos simultâneos
-
----
-
-## Escopo do MVP
-
-Nesta fase inicial, o foco será:
-
-* Coleta de notícias via RSS
-* API básica de notícias
-* Dashboard inicial
-* Busca e filtros
-* Visualização básica de estatísticas
-
-O objetivo do MVP é validar o uso da plataforma e disponibilizar uma primeira versão funcional do dashboard.
-
----
-
-## Riscos e Considerações
-
-* Mudanças na estrutura dos sites podem quebrar scraping
-* Dependência de fontes externas
-* Necessidade de validação das fontes
-* Crescimento rápido do volume de dados
-
----
-
-## Critérios de Aceitação
-
-* Notícias devem ser exibidas corretamente e atualizadas
-* Filtros e busca devem funcionar sem falhas
-* Dashboard deve apresentar dados claros e compreensíveis
-* Interface deve ser utilizável por iniciantes
-
----
-
-## Público-Alvo
-
-* Estudantes
-* Integrantes da liga
-* Entusiastas de tecnologia
-* Público geral interessado em cibersegurança
-
----
-
-## Objetivo Educacional
-
-O projeto busca democratizar o acesso à informação em cibersegurança, tornando o conteúdo mais acessível, visual e educativo.
+# Fashion MNIST — Classificação de Peças de Vestuário
+
+## Objetivo
+Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de roupas e acessórios em 10 categorias distintas, utilizando o dataset Fashion MNIST como benchmark.
+
+## Integrantes
+- Pedro Henrique Macedo Antunes
+- Kevin Teixeira de Araújo Carvalho
+- Diogo Lima de Oliveira
+
+## Fonte dos dados
+- **Dataset:** Fashion MNIST
+- **Origem:** [Kaggle — Zalando Research](https://www.kaggle.com/datasets/zalando-research/fashionmnist)
+- **Descrição:** 70.000 imagens em escala de cinza (28x28 pixels) divididas em 10 classes de roupas e acessórios, com 6.000 amostras por classe no treino e 1.000 no teste.
+
+## Tipo da tarefa
+Classificação multiclasse — o atributo-alvo (`label`) representa uma das 10 categorias:
+
+
+|
+ Rótulo 
+|
+ Classe 
+|
+|
+--------
+|
+--------
+|
+|
+ 0 
+|
+ T-shirt/top 
+|
+|
+ 1 
+|
+ Trouser 
+|
+|
+ 2 
+|
+ Pullover 
+|
+|
+ 3 
+|
+ Dress 
+|
+|
+ 4 
+|
+ Coat 
+|
+|
+ 5 
+|
+ Sandal 
+|
+|
+ 6 
+|
+ Shirt 
+|
+|
+ 7 
+|
+ Sneaker 
+|
+|
+ 8 
+|
+ Bag 
+|
+|
+ 9 
+|
+ Ankle boot 
+|
+
+## Organização dos arquivos
+repositório
+┣  fundamentosIA.ipynb # Notebook principal com todo o projeto
+┗  README.md # Este arquivo
+
+Os dados são carregados diretamente do Kaggle via `kagglehub` dentro do notebook, sem necessidade de download manual.
+
+## Como abrir no Google Colab
+1. Acesse [colab.research.google.com](https://colab.research.google.com)
+2. Clique em **Arquivo → Abrir notebook → GitHub**
+3. Cole a URL deste repositório e selecione o arquivo `fundamentosIA.ipynb`
+4. Execute as células em ordem — a primeira célula instala e carrega o dataset automaticamente
+
+## Modelos utilizados
+- **DummyClassifier** — baseline de referência, sempre prevê a classe mais frequente
+- **SGDClassifier** — modelo linear treinado por gradiente descendente estocástico (loss=hinge, equivalente a SVM linear)
+- **RandomForestClassifier** — conjunto de 100 árvores de decisão com profundidade máxima de 30
+
+## Principais resultados
+
+| Modelo | Acurácia | F1-score (weighted) |
+|--------|----------|----------------------|
+| Baseline (DummyClassifier) | 10.01% | 0.018 |
+| SGDClassifier | 85.41% | 0.8537 |
+| **RandomForestClassifier** | **97.88%** | **0.9787** |
+
+O **RandomForestClassifier** foi escolhido como modelo final por apresentar o melhor desempenho em todas as métricas avaliadas. As principais dificuldades ocorreram entre classes visualmente similares: Shirt, Coat e Pullover (roupas de cima com silhueta parecida) e Sandal, Sneaker e Ankle Boot (calçados com estrutura semelhante).
