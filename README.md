@@ -1,7 +1,7 @@
 # Fashion MNIST — Classificação de Peças de Roupa
 
 ## Objetivo
-Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de roupas e acessórios em 10 categorias distintas, utilizando o dataset Fashion MNIST como benchmark.
+Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de roupas e acessórios em 10 categorias distintas, utilizando o dataset Fashion MNIST.
 
 ## Integrantes
 - Pedro Henrique Macedo Antunes
@@ -17,8 +17,8 @@ Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de
 Classificação multiclasse, o atributo-alvo (`label`) representa uma das 10 categorias: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag e Ankle Boot.
 
 ## Organização dos arquivos
-- 'fundamentosIA.ipynb':  Notebook principal com todas as etapas do projeto
-- 'README.md': Arquivo com informações do projeto e instruções
+- **fundamentosIA.ipynb**:  Notebook principal com todas as etapas do projeto
+- **README.md**: Arquivo com informações do projeto e instruções
    
 ## Como abrir no Google Colab
 1. Acesse o repositório no GitHub.
