@@ -47,6 +47,9 @@ O RandomForestClassifier foi escolhido como modelo final por apresentar o melhor
 - Diogo Lima de Oliveira: seções 5.4 (Pré-Processamento) e 5.5 (Separação dos dados)
 - Kevin Teixeira de Araújo Carvalho: seções 5.6 (Modelagem) e 5.7 (Avaliação e Discussão)
 
+## Declaração de uso de ferramentas de inteligência artificial (IA)
+Foram utilizadas ferramentas de inteligência artificial na seção 5.6 (modelagem) do notebook como apoio ao entendimento dos modelos e à melhor organização dos respectivos códigos. 
+
 ## Link do vídeo 
 Colocar aqui.
 
