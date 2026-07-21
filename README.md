@@ -17,18 +17,18 @@ Desenvolver um modelo de aprendizado de máquina capaz de classificar imagens de
 Classificação multiclasse, o atributo-alvo (`label`) representa uma das 10 categorias: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag e Ankle Boot.
 
 ## Organização dos arquivos
-repositório:
+Repositório:
 1. fundamentosIA.ipynb # Notebook principal com todo o projeto
 2. README.md # Este arquivo
    
 Os dados são carregados diretamente do Kaggle via `kagglehub` dentro do notebook, sem necessidade de download manual.
 
 ## Como abrir no Google Colab
-1. Acesse [colab.research.google.com](https://colab.research.google.com)
-2. Clique em **Arquivo → Abrir notebook → GitHub**
-3. Cole a URL deste repositório e selecione o arquivo `fundamentosIA.ipynb`
-4. Execute as células em ordem — a primeira célula instala e carrega o dataset automaticamente
-
+1. Acesse o repositório no GitHub.
+2. Abra o arquivo fundamentosIA.ipynb.
+3. Clique em "Open in Colab" (caso disponível) ou acesse o Google Colab e escolha Arquivo → Abrir notebook → GitHub.
+4. Execute todas as células em ordem.
+   
 ## Modelos utilizados
 - **DummyClassifier** — baseline de referência, sempre prevê a classe mais frequente
 - **SGDClassifier** — modelo linear treinado por gradiente descendente estocástico (loss=hinge, equivalente a SVM linear)
